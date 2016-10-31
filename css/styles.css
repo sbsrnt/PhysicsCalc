@@ -56,7 +56,6 @@ body {
     font-size: 16px;
     background-color: transparent;
     border-bottom: 1px solid #272B35;
-    font-size: 16px;
     padding: 5px;
     outline: 0;
     -moz-appearance: textfield; }
@@ -365,7 +364,7 @@ body {
         height: calc(100% + 6px);
         position: relative;
         left: -3px;
-        top: 0px; }
+        top: 0; }
         .container .content .converter .SI__container--outer table tr .SI__label--input {
           padding-left: 5px;
           font-weight: normal; }
@@ -437,8 +436,22 @@ body {
       .container .content .converter .bottom-menu ul .active-dot {
         background-color: #36B1BF;
         color: #D7D5BE; }
-  .container .content .content__default .section .section__content .section__content--body .xa {
-    text-align: right; }
+  .container .content .content__default .section__content .section__content--body td {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    width: 20%;
+    text-align: center;
+    padding-left: 0; }
+    .container .content .content__default .section__content .section__content--body td:hover {
+      background-color: #36B1BF; }
+  .container .content .content__default .section__content tr {
+    cursor: pointer; }
+    .container .content .content__default .section__content tr:nth-child(2) {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .container .content .content__default .section__content tr:last-child {
+      background-color: rgba(0, 0, 0, 0.1); }
 
 #id__7 .calculator .section__content .section__content--body td, #id__12 .calculator .section__content .section__content--body td, #id__23 .calculator .section__content .section__content--body td, #id__26 .calculator .section__content .section__content--body td, #id__27 .calculator .section__content .section__content--body td, #id__30 .calculator .section__content .section__content--body td, #id__39 .calculator .section__content .section__content--body td, #id__43 .calculator .section__content .section__content--body td, #id__44 .calculator .section__content .section__content--body td, #id__47 .calculator .section__content .section__content--body td {
   width: 50%; }

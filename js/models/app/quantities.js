@@ -1,5 +1,5 @@
 var quantities = {
-    "physics": {
+    "Fizyka": {
         "Astrodynamika": [
             {
                 "calculator": {
@@ -3780,7 +3780,7 @@ var quantities = {
                 }
             }
         ],
-        "electromagnetism": [
+        "Elektromagnetyzm": [
             {
                 "calculator": {
                     "header": "Antena dipolowa - natężenie prądu",

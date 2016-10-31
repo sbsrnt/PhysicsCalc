@@ -1,6 +1,5 @@
 "use strict";
 function generateDefaultView(type){
-    var styles = "width: 20%; text-align: center;";
     var ql = Object.keys(quantities[type]).length;
     var output = '';
     output +=
@@ -10,33 +9,32 @@ function generateDefaultView(type){
             '</tr>';
     if (ql > 5) {
         output +=
-            '<tr class="section__content--body xa">';
+            '<tr class="section__content--body">';
         for (var i = 0; i < 5; i++) {
-            output += '<td style="'+styles+'">' + Object.keys(quantities[type])[i] + '</td>';
+            output += '<td >' + Object.keys(quantities[type])[i] + '</td>';
         }
         output += '</tr>';
 
         output += '<tr class="section__content--body">';
-        for (var i = 5; i < ql; i++) {
-            output += '<td style="'+styles+'">' + Object.keys(quantities[type])[i] + '</td>';
+        for (var j = 5; j < ql; j++) {
+            output += '<td>' + Object.keys(quantities[type])[j] + '</td>';
         }
         output += '</tr>';
     }
     else{
         output +=
             '<tr class="section__content--body">';
-        for (var i = 0; i < 5; i++) {
-            output += '<td style="'+styles+'">' + Object.keys(quantities[type])[i] + '</td>';
+        for (var k = 0; k < 5; k++) {
+            output += '<td >' + Object.keys(quantities[type])[k] + '</td>';
         }
         output += '</tr>';
     }
     output += '</table>';
-console.log(output);
     return output;
 }
 
 $(function() {
-   $('.content__default').append(generateDefaultView('physics'));
+   $('.content__default').append(generateDefaultView('Fizyka'));
 });
 
 //Generate specific rows
@@ -442,8 +440,7 @@ function setColspan(nodeCalculator){
 }
 function setSelectClass(id){
     $('.abbreviation').find('select').each(function(index){
-        var i = index;
-        $(this).attr('id', 'id__'+id+'--select'+i);
+        $(this).attr('id', 'id__'+id+'--select'+index);
     });
 }
 function removeAdditionalRows(nodeCalculator){

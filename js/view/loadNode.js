@@ -10,13 +10,14 @@ $(document).ready(function() {
          case 'Dynamika':
             physics_dynamics_functions(id);
             break;
-         case 'electromagnetism':
+         case 'Elektromagnetyzm':
             physics_electromagnetism_functions(id);
             break;
       }
    }
+
    function load(type, selector){
-      var home = $('.title p a');
+      // var home = $('.title p a');
       var sidebarLinks = $('.sidebar__sublist__category ul li');
 
       var element = $('.'+type+'__'+selector+' ul li');
@@ -37,7 +38,7 @@ $(document).ready(function() {
       getContents(element);
    }
 
-   load('physics', 'Astrodynamika');
-   load('physics', 'Dynamika');
-   load('physics', 'electromagnetism');
+   load('Fizyka', 'Astrodynamika');
+   load('Fizyka', 'Dynamika');
+   load('Fizyka', 'Elektromagnetyzm');
 });

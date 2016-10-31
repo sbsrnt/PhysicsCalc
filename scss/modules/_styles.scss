@@ -16,7 +16,6 @@ body{
       font-size: $input-font-size;
       background-color: transparent;
       border-bottom: 1px solid $primary-background-color;
-      font-size: $input-font-size;
       padding: 5px;
       outline: 0;
       &::-webkit-outer-spin-button,
@@ -406,7 +405,7 @@ body{
                height: calc(100% + 6px);
                position: relative;
                left: -3px;
-               top: 0px;
+               top: 0;
                tr{
                   .SI__label--input{
                      padding-left: 5px;
@@ -508,12 +507,25 @@ body{
       }
 
       .content__default{
-         .section{
-            .section__content{
-               .section__content--body{
-                  .xa {
-                     text-align: right;
+         .section__content{
+            .section__content--body{
+               td{
+                  @include transition(all, 400ms, ease);
+                  width: 20%;
+                  text-align: center;
+                  padding-left:0;
+                  &:hover{
+                     background-color: $result-color;
                   }
+               }
+            }
+            tr{
+               cursor: pointer;
+               &:nth-child(2){
+                  background-color: $rgba-10;
+               }
+               &:last-child{
+                  background-color: $rgba-10;
                }
             }
          }
