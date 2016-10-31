@@ -1,3 +1,4 @@
+"use strict";
 $(document).ready(function() {
    var active = 'active';
    var displayNone = 'displayNone';
@@ -21,7 +22,7 @@ $(document).ready(function() {
       var sidebarLinks = $('.sidebar__sublist__category ul li');
 
       var element = $('.'+type+'__'+selector+' ul li');
-
+       var homeElement = $('.content__default td');
       function getContents(sidebarLink){
          sidebarLink.click(function () {
             var id = $(this).data('id');
@@ -35,6 +36,16 @@ $(document).ready(function() {
             bottomSection.css('display', 'block');
          });
       }
+
+      function showSublist(type, selector){
+        homeElement.on('click', function(){
+            // $('.section__content--body td').addClass(displayNone);
+            var z = $(this).append(quantities[type][selector]);
+            console.log(z);
+        });
+
+      }
+      showSublist(type, selector);
       getContents(element);
    }
 
