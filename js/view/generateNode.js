@@ -443,6 +443,11 @@ function setSelectClass(id){
         $(this).attr('id', 'id__'+id+'--select'+index);
     });
 }
+function setConstTDStyle(){
+    if($('input').hasClass('const')){
+        $('.const').parent().css('background', '#e38979');
+    }
+}
 function removeAdditionalRows(nodeCalculator){
    if(nodeCalculator.body.length == 5){
       $('.calculator .section__content--body:eq(3)').remove();
@@ -470,4 +475,5 @@ function generateNode(type, selector, id){
   setConstAttr(nodeCalculator, id);
   setColspan(nodeCalculator);
   setSelectClass(id);
+  setConstTDStyle();
 }
