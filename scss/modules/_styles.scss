@@ -1,0 +1,557 @@
+@import "../partials/_typography";
+@import "../partials/_reset";
+@import "../partials/_grid";
+@import "../partials/_variables";
+@import "../partials/_mixins";
+
+#get-contents{
+   display: none;
+}
+
+body{
+   background: url(../images/background.png);
+   color: $primary-color;
+   font-family: 'Roboto', sans-serif;
+   input{
+      font-size: $input-font-size;
+      background-color: transparent;
+      border-bottom: 1px solid $primary-background-color;
+      font-size: $input-font-size;
+      padding: 5px;
+      outline: 0;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button{
+         -webkit-appearance: none;
+      }
+      -moz-appearance:textfield;
+   }
+   label{
+      font-size: $label-font-size;
+   }
+}
+
+.nav{
+   background-color: $primary-background-color;
+   position: fixed;
+   z-index: 999;
+   height: 40px;
+   width: $container-width;
+   left: $sidebar-width;
+   div{
+      display: inline-block;
+      text-align: center;
+   }
+}
+
+.container{
+   .sidebar{
+      background-color: $primary-background-color;
+      position: fixed;
+      z-index: 999;
+      height: 100%;
+      width: $sidebar-width;
+      .sidebar__search{
+         .fa-search {
+            color: $icon-color;
+            position: absolute;
+            top: 11px;
+            left: 10px;
+            font-size: 15px;
+         }
+         .sidebar__search__input{
+            background-color: $primary-background-color;
+            color: $primary-color;
+            height: 41px;
+            width: 100%;
+            text-indent: 30px;
+            border-bottom: 1px solid $primary-color;
+            @include transition(border, 400ms, ease);
+            &:focus{
+               border-bottom: 1px solid $result-color;
+               color: $result-color;
+            }
+            &::-webkit-search-cancel-button{
+               -webkit-appearance: none;
+            }
+         }
+      }
+      .sidebar__list{
+         @include box-shadow(2px, 0px, 10px, 0px, $primary-background-color, 0);
+         height: calc(100% - 41px);
+         overflow-y: scroll;
+         .sidebar__sublist{
+            .sidebar__sublist__category{
+               color: $primary-color;
+               padding: 5px;
+               cursor: pointer;
+               ul{
+                  color: lightgray;
+                  padding-left: 20px;
+                  li{
+                     list-style-type: disc;
+                     margin-bottom: 3px;
+                     margin-top: 3px;
+                     a{
+                        outline: none;
+                     }
+                     &:hover{
+                        color: $primary-color;
+                        text-decoration: underline;
+                     }
+                  }
+                  .active{
+                     color: $primary-color;
+                  }
+               }
+            }
+         }
+         &::-webkit-scrollbar{
+            width: 10px;
+         }
+         &::-webkit-scrollbar-thumb{
+            background-color: $primary-color;
+            &:active{
+               background-color: $result-color;
+            }
+         }
+      }
+   }
+
+   .content{
+      position: relative;
+      z-index: 10;
+      height: calc(100vh - 2%);
+      padding: 1%;
+      width: $container-width - 2%;
+      left: $sidebar-width;
+      top: 40px;
+      .section{
+         color: $primary-background-color;
+         @include background-opacity($primary-color, 0.5);
+         @include grid(2, 1%);
+         height: 45vh;
+         .section__content{
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            td{
+                label{
+                   font-size: $R5-label-font-size;
+                }
+            }
+            .section__content--header{
+               background-color: $header-background-color;
+               height: 15%;
+               text-align: center;
+               td{
+                  h3{
+                     display: inline;
+                     text-transform: uppercase;
+                     vertical-align: middle;
+                  }
+               }
+            }
+            .section__content--body{
+               td{
+                   font-size: $R5-input-font-size;
+                 i{
+                   font-style: normal;
+                 }
+               }
+               .col-1{
+                   width: 50%;
+                   input{
+                       width: 71%;
+                   }
+                }
+               input{
+                  width: 35%;
+                   
+               }
+               .blueprint{
+                  height: 25%;
+                  text-align: center;
+                  font-size: $blueprint-font-size;
+               }
+               .variable{
+                  color: $variables-color;
+                  font-weight: bold;
+               }
+               
+               .sqrt-overline{
+                  border-top: 1px solid black;
+               }
+               
+            }
+            .section__content--footer{
+               background-color: $result-color;
+               td{
+                  div{
+                     @include grid(2, 1%);
+                  }
+                  .result-vlock{
+                     position: relative;
+                     top: 2px;
+                  }
+                  .round-block{
+                     text-align: right;
+                     button{
+                        background-color: $button-color;
+                        color: $primary-color;
+                        @include transition(all, 200ms, ease);
+                        font-size: 24px;
+                        outline: 0;
+                        border: 0;
+                        padding: 5px;
+                        cursor: pointer;
+                        outline: none;
+                        .button-description{
+                           background: $primary-color;
+                           color: $button-color;
+                           @include transition(all, 200ms, ease);
+                           font-size: $input-font-size;
+                           visibility: hidden;
+                           opacity: 0;
+                           position: absolute;
+                           margin-top: 10px;
+                           margin-left: -74px;
+                           padding: 5px;
+                           border: 1px solid $button-color;
+                           width: 136px;
+                           .carret{
+                              position: absolute;
+                              width: 0;
+                              height: 0;
+                              border-style: solid;
+                              border-width: 0 5px 5px 5px;
+                              border-color: transparent transparent $button-color transparent;
+                              right: 53px;
+                              top: -5px;
+                           }
+                           .after-copy{
+                              display: none;
+                           }
+                        }
+                        &:hover{
+                           background-color: $primary-color;
+                           color: $button-color;
+                           .button-description {
+                              visibility: visible;
+                              opacity: 1;
+                           }
+                        }
+                     }
+                  }
+                  input.result{
+                     width: 70.8%;
+                  }
+                  input.roundTo{
+                     color: $primary-color;
+                     width: 6%;
+                     text-align: center;
+                     font-weight: bold;
+                  }
+               }
+            }
+
+            .section__content--body,
+            .section__content--footer{
+               td{
+                  padding: 0;
+                   padding-left: 10px;
+                   .result-block{
+                      position: relative;
+                      top: 2px;
+                   }
+                   .round-block{
+                  input{
+                     margin-top: -5px;
+                     font-size: $R5-label-font-size;
+                  }
+                  button{
+                     .button-description{
+                        .before-copy{
+                           font-size: $R5-label-font-size;
+                        }
+                     }
+                  }
+               }
+               }
+               label, input{
+                  display: block;
+               }
+               input, p{
+                  display: inline-block;
+               }
+               input{
+                  margin-top: 5px;
+               }
+            }
+            tr:nth-child(odd){
+               background-color: $rgba-10;
+            }
+            tr:nth-child(even){
+               background-color: $rgba-15;
+            }
+            tr:first-child{
+               background-color: $header-background-color;
+            }
+            tr:last-child{
+               background-color: $result-color;
+            }
+            .abbreviation-row{
+               .abbreviation-col{
+                  padding: 0;
+                  text-align: center;
+                  width: 10%;
+               }
+            }
+         }
+      }
+      .formula{
+         .section__content{
+            .section__content--body{
+              .longPattern{
+                font-size: 18px;
+              }
+            }
+            tr:nth-child(odd){
+               background-color: $rgba-10;
+            }
+            tr:nth-child(even){
+               background-color: $rgba-15;
+            }
+            tr:first-child{
+               background-color: $header-background-color;
+            }
+         }
+      }
+      .converter{
+         @include no-select();
+         display: none;
+         .section__content{
+            .section__content--body{
+               .SI__section{
+                  background-color: $rgba-10;
+                  @include transition(all, 400ms, ease);
+                  cursor: pointer;
+                  width: 20%;
+                  .SI__section--icon{
+                     color: $icon-color;
+                     @include transition(all, 400ms, ease);
+                     font-size: 100px;
+                     text-align: center;
+                  }
+                  .SI__section--description{
+                     position: relative;
+                     text-align: center;
+                     z-index: 15;
+                     text-transform: uppercase;
+                     font-weight: bold;
+                     top: -7px;
+                     padding: 10px 0 0 10px;
+                  }
+                  &:hover{
+                     background-color: $result-color;
+                     color: $primary-color;
+                     .SI__section--icon{
+                        color: $hover-color;
+                     }
+                  }
+               }
+               .temperature{
+                  .SI__section--icon {
+                     left: -10px;
+                     position: relative;
+                     sup {
+                        position: relative;
+                        font-size: 40px;
+                        bottom: 15px;
+                        left: 5px;
+                     }
+                  }
+                  .SI__section--description {
+                     top: -7px;
+                  }
+               }
+            }
+            .section__content--body, .section__content--footer{
+               td{
+                  padding: 0;
+               }
+            }
+            tr:nth-child(odd) {
+              background-color: transparent;;
+            }
+            tr:nth-child(even) {
+               background-color: transparent;;
+            }
+            tr:first-child {
+               background-color: $header-background-color;
+            }
+            tr:last-child {
+               background-color: transparent;
+               td {
+                  input {
+                     border-bottom: 1px solid $primary-background-color;
+                  }
+               }
+            }
+         }
+         .SI__container--outer{
+            display: none;
+            table{
+               background-color: transparent;;
+               width: calc(100% + 14px);
+               height: calc(100% + 6px);
+               position: relative;
+               left: -3px;
+               top: 0px;
+               tr{
+                  .SI__label--input{
+                     padding-left: 5px;
+                     font-weight: normal;
+                  }
+                  &:first-child {
+                     background-color: transparent;
+                     td:first-child {
+                         background-color: transparent;
+                     }
+                  }
+               }
+            }
+            @-moz-document url-prefix() {
+               table{
+                  left: -3px;
+                  top: -3px;
+               }
+            }
+         }
+         .SI__container--load{
+            .SI__container--inner{
+               width: calc(100% + 6px);
+               height: calc(100% + 6px);
+               tr{
+                  td{
+                     text-align: center;
+                  }
+                  &:first-child{
+                     height: 33%;
+                     .SI__header{
+                        display: inline;
+                        height: 20%;
+                        text-transform: uppercase;
+                     }
+                  }
+                  &:nth-child(odd){
+                     background-color: $rgba-15;
+                  }
+                  &:nth-child(even){
+                     background-color: $rgba-10;
+                  }
+               }
+            }
+            .SI__container--slide{
+               display: none;
+            }
+            .active-slide{
+               display: table;
+            }
+         }
+         .hidden{
+            display: none;
+         }
+         .SI__arrow{
+            background-color: $rgba-10;
+            color: $icon-color;
+            @include transition(all, 400ms, ease);
+            font-size: 50px;
+            width: 10%;
+            cursor: pointer;
+            text-align: center;
+            &:hover{
+               background-color: $result-color;
+               color: $hover-color;
+            }
+         }
+         .bottom-menu{
+            background-color: $rgba-10;
+            ul{
+               li{
+                  background-color: $rgba-10;
+                  color: $icon-color;
+                  @include transition(all, 400ms, ease);
+                  display: inline-block;
+                  font-size: 20px;
+                  margin: 0 5px;
+                  padding: 10px;
+                  width: 25px;
+                  cursor: pointer;
+                  &:last-child{
+                     i{
+                        position: relative;
+                        left: -2px;
+                        font-style: normal;
+                     }
+                  }
+                  &:hover{
+                     background-color: $result-color;
+                     color: $hover-color;
+                  }
+               }
+               .active-dot{
+                  background-color: $result-color;
+                  color: $hover-color;
+               }
+            }
+         }
+      }
+
+      .content__default{
+         .section{
+            .section__content{
+               .section__content--body{
+                  .xa {
+                     text-align: right;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+#id__7, #id__12, #id__23, #id__26, #id__27, #id__30, #id__39, #id__43, #id__44, #id__47{
+   .calculator{
+      .section__content{
+         .section__content--body{
+            td{
+               width: 50%;
+               .col-2{
+                  width: 71%;
+               }
+            }
+         }
+         .section__content--footer{
+            .result-block{
+               input{
+                  margin-top: 2px;
+               }
+            }
+         }
+      }
+   }
+}
+
+#id__26, #id__27, #id__39, #id__43, #id__44, #id__47{
+   .formula{
+      .section__content{
+         .section__content--body{
+            td{
+                  padding: 7px;
+               }
+            }
+         }
+      }
+   }

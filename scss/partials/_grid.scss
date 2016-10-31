@@ -1,0 +1,14 @@
+//Primary width
+$sidebar-width: 15%;
+$container-width: 100% - $sidebar-width;
+
+//Section grid
+@mixin grid($cols, $margin){
+   float: left;
+   margin-bottom: $margin;
+   margin-right: $margin;
+   width: ((100% - (($cols - 1) * $margin)) / $cols);
+   &:nth-child(#{$cols}n){
+      margin-right: 0;
+   }
+}

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>PhysicsCalc</title>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+      <link href="css\styles.css" rel="stylesheet">
+   </head>
+   <body>
+      <nav class="nav">
+         <div class="nav__home">Strona główna</div>
+         <div class="nav__title">Kalkulator jednostek fizycznych</div>
+      </nav>
+
+      <div class="container">
+         <div class="sidebar">
+            <div class="sidebar__search">
+               <span class="fa fa-search" aria-hidden="true"></span>
+               <input class="sidebar__search__input" type="search" placeholder="Szukaj..." />
+            </div>
+
+            <div class="sidebar__list">
+               <ul class="sidebar__sublist physics">
+                  <li class="sidebar__sublist__category physics__Astrodynamika">Astrodynamika
+                     <ul class="physics__list">
+                        <li><a href="#">Absolutna wielkość I pasma słonecznego</a></li>
+                        <li><a href="#">Całkowity rozmiar wizualny zmiennych cefeidalnych</a></li>
+                        <li><a href="#">Ciśnienie relatywistyczne</a></li>
+                        <li><a href="#">Czas kosmiczny w przesunięciu ku czerwieni</a></li>
+                        <li><a href="#">Czas parowania czarnej dziury</a></li>
+                        <li><a href="#">Degeneracja ciśnieniowa gwiazdy neutronowej przez nierelatywistyczne neutrony</a></li>
+                        <li><a href="#">Jasność fal grawitacyjnych</a></li>
+                        <li><a href="#">Gęstość materii (kosmologia)</a></li>
+                        <li><a href="#">Gęstość krytyczna (kosmologia)</a></li>
+                        <li><a href="#">Gęstość krzywizny (kosmologia)</a></li>
+                        <li><a href="#">Gęstość lambdy (kosmologia)</a></li>
+                        <li><a href="#">Granica jasności Eddington'a</a></li>
+                        <li><a href="#">Granica jasności Eddington'a bazowana na masie słońca</a></li>
+                        <li><a href="#">Granica Roche'a</a></li>
+                        <li><a href="#">Grawitacyjne przesunięcie ku czerwieni czarnej dziury</a></li>
+                        <li><a href="#">Jasność zmiennej cefeidalnej</a></li>
+                        <li><a href="#">Masa Chandrasekhar'a</a></li>
+                        <li><a href="#">Masa Jeans'a</a></li>
+                        <li><a href="#">Parametr Hubble'a w przesunięciu ku czerwieni</a></li>
+                        <li><a href="#">Prawo Titiusa - Bode'a</a></li>
+                        <li><a href="#">Prędkość radialna liczona przy pomocy prawa Hubble'a</a></li>
+                        <li><a href="#">Promień kątowy pierścienia Einstein'a</a></li>
+                        <li><a href="#">Promień Schwarzschild'a czarnej dziury</a></li>
+                        <li><a href="#">Przesunięcie ku czerwieni (kosmologia)</a></li>
+                        <li><a href="#">Równanie Friedmanna</a></li>
+                        <li><a href="#">Równanie Friedmanna bazowane na ciśnieniu</a></li>
+                        <li><a href="#">Skala czasowa Kelvina Helmholtza liczona przy pomocy masy ciała</a></li>
+                        <li><a href="#">Skala czasowa Kelvina Helmholtza liczona przy pomocy grawitacyjnej energii potencjalnej</a></li>
+                        <li><a href="#">Temperatura czarnej dziury</a></li>
+                     </ul>
+                  </li>
+                  <li class="sidebar__sublist__category physics__Dynamika">Dynamika
+                     <ul class="physics__list">
+                        <li><a href="#">Apocentrum ruchu orbity w polu grawitacyjnym</a></li>
+                        <li><a href="#">Długość fali klinu Kelvina</a></li>
+                        <li><a href="#">Ekscentryczność orbity w polu siły grawitacji</a></li>
+                        <li><a href="#">Impedancja drgań wymuszonych</a></li>
+                        <li><a href="#">Izotropowa sprężystość ciał stałych modułu Younga</a></li>
+                        <li><a href="#">Moment zginania promienia</a></li>
+                        <li><a href="#">Kąt klina Macha dla fal uderzeniowych</a></li>
+                        <li><a href="#">Okres oscylacji wahadła podwójnego</a></li>
+                        <li><a href="#">Podciąganie kapilarne</a></li>
+                        <li><a href="#">Prędkość fali podłużnej w cienkim okrągłym pręcie</a></li>
+                        <li><a href="#">Prędkość fali poprzecznej w cienkim okrągłym pręcie</a></li>
+                        <li><a href="#">Prędkość fali poprzecznej na cienkiej płycie wzdłuż szerokości</a></li>
+                        <li><a href="#">Prędkość fali poprzecznej na cienkiej płycie wzdłuż wysokości</a></li>
+                        <li><a href="#">Prędkość graniczna</a></li>
+                        <li><a href="#">Prędkość kątowa wahadła Foucaulta</a></li>
+                        <li><a href="#">Promień sferycznego wstrząsu adiabatycznego</a></li>
+                        <li><a href="#">Relatywistyczny Hamiltonian dla naładowanej cząstki</a></li>
+                        <li><a href="#">Siła Coriolisa</a></li>
+                        <li><a href="#">Skoki ciśnienia liczone przy pomocy relacji Rankine'a-Hugoniota</a></li>
+                        <li><a href="#">Skręcanie par jednorodnych prętów</a></li>
+                        <li><a href="#">Sztywność skrętna długiej płaskiej taśmy</a></li>
+                        <li><a href="#">Wskaźnik prędkości fali uderzeniowej używając relacji Rankine'a - Hugoniota</a></li>
+                        <li><a href="#">Wskaźnik temperatury na fali uderzeniowej używając relacji Rankine'a - Hugoniota</a></li>
+                     </ul>
+                  </li>
+                  <li class="sidebar__sublist__category physics__electromagnetism">Elektromagnetyzm
+                     <ul class="physics__list">
+                        <li><a href="#">Antena dipolowa - natężenie prądu</a></li>
+                        <li><a href="#">Antena dipolowa - fala elektryczna</a></li>
+                        <li><a href="#">Antena dipolowa - fala magnetyczna</a></li>
+                        <li><a href="#">Antena dipolowa - średnia gęstość emitowanej mocy</a></li>
+                        <li><a href="#">Apertura anteny dla pierwszego kąta współrzędnych</a></li>
+                        <li><a href="#">Apertura anteny dla drugiego kąta współrzędnych</a></li>
+                        <li><a href="#">Całkowita moc promieniowania z oscylującego dipola</a></li>
+                        <li><a href="#">Czas relaksacji elektronu w plaźmie</a></li>
+                        <li><a href="#">Częstotliwość falowa obwodu prostownika</a></li>
+                        <li><a href="#">Częstotliwość kątowa Cyklotronu</a></li>
+                        <li><a href="#">Częstotliwość plazmy</a></li>
+                        <li><a href="#">Długość elektronu Debye'a w plaźmie</a></li>
+                        <li><a href="#">Długość Landau'a w ciepłej plaźmie</a></li>
+                        <li><a href="#">Gęstość energii pola elektromagnetycznego</a></li>
+                        <li><a href="#">Gęstość energii w medium</a></li>
+                        <li><a href="#">Gęstość strumienia magnetycznego</a></li>
+                        <li><a href="#">Głębokość efektu naskórkowości</a></li>
+                        <li><a href="#">Impedancja akustyczna</a></li>
+                        <li><a href="#">Impedancja serii AC</a></li>
+                        <li><a href="#">Indukcyjność</a></li>
+                        <li><a href="#">Indukcyjność całkowita równoległego obwodu elektrycznego</a></li>
+                        <li><a href="#">Indukcyjność drutu</a></li>
+                        <li><a href="#">Indukcyjność dwóch równoległych przewodów</a></li>
+                        <li><a href="#">Indukcyjność rur koncentrycznych cylindrycznych</a></li>
+                        <li><a href="#">Indukcyjność solenoidu (cewki) skierowanego na północ</a></li>
+                        <li><a href="#">Indukcyjność spiralnej cewki</a></li>
+                        <li><a href="#">Kąt akceptacji światłowodu</a></li>
+                        <li><a href="#">Kąt stożka Cherenkova</a></li>
+                        <li><a href="#">Kondensator cylindryczny - pojemność</a></li>
+                        <li><a href="#">Linia wzroku przesyłu (odległość anteny)</a></li>
+                        <li><a href="#">Magazynowanie energii</a></li>
+                        <li><a href="#">Mierzenie efektywnej apertury</a></li>
+                        <li><a href="#">Moment diamagnetyczny atomu</a></li>
+                        <li><a href="#">Obszar cewki cylindrycznej</a></li>
+                        <li><a href="#">Parametr plazmowy sfery Debye'a</a></li>
+                        <li><a href="#">Perycentrum ruchu orbity w polu grawitacyjnym</a></li>
+                        <li><a href="#">Podatność magnetyczna</a></li>
+                        <li><a href="#">Pojemność elektryczna</a></li>
+                        <li><a href="#">Pojemność elektryczna dwóch kul</a></li>
+                        <li><a href="#">Pojemność elektryczna okrągłego cylindra</a></li>
+                        <li><a href="#">Pojemność elektryczna pomiędzy dwoma koncentrycznymi cylindrami</a></li>
+                        <li><a href="#">Pojemność elektryczna pomiędzy dwoma koncentrycznymi kulami</a></li>
+                        <li><a href="#">Pojemność elektryczna pomiędzy równoległymi i koncentrycznymi dyskami tarczowymi</a></li>
+                        <li><a href="#">Pojemność elektryczna powierzchni pomiędzy dwoma równoległymi cylindrami</a></li>
+                        <li><a href="#">Pojemność elektryczna powierzchni prawie sferycznej</a></li>
+                        <li><a href="#">Pojemność elektryczna sferycznego kondensatora</a></li>
+                        <li><a href="#">Pojemność elektryczna sześcianu</a></li>
+                        <li><a href="#">Pojemność równoległych płyt kondensatora</a></li>
+                        <li><a href="#">Pole depolaryzacji</a></li>
+                        <li><a href="#">Pole elektryczne</a></li>
+                        <li><a href="#">Pole elektryczne dipola w określonym punkcie</a></li>
+                        <li><a href="#">Pole elektryczne dipola we współrzędnych biegunowych</a></li>
+                        <li><a href="#">Pole elektryczne naładowanej linii</a></li>
+                        <li><a href="#">Pole elektryczne naładowanej powierzchni</a></li>
+                        <li><a href="#">Pole elektryczne naładowanej równomiernie kuli</a></li>
+                        <li><a href="#">Pole elektryczne naładowanej równomiernie kuli Gaussa</a></li>
+                        <li><a href="#">Pole elektryczne naładowanej równomiernie osi dysku</a></li>
+                        <li><a href="#">Pole magnetyczne dipola magnetycznego bazowanego na kącie</a></li>
+                        <li><a href="#">Pole magnetyczne dipola magnetycznego bazowanego na promieniu</a></li>
+                        <li><a href="#">Pole magnetyczne solenoidu (cewki) bazowanego na osi</a></li>
+                        <li><a href="#">Potencjał elektryczny ruchomego punktu liczonego przy pomocy potencjału Lienarda-Wiecherta</a></li>
+                        <li><a href="#">Potencjał skuteczności ekranowania Debye'a</a></li>
+                         <!-- todo: prawo ohma-->
+                        <li><a href="#">Prędkość Alfvena</a></li>
+                        <li><a href="#">Prędkość fazowa/grupowa w plaźmie</a></li>
+                        <li><a href="#">Prędkość termiczna elektronu w plaźmie</a></li>
+                        <li><a href="#">Promień cyklotronu liczony przy pomocy procesji Larmora</a></li>
+                        <li><a href="#">Pryzmat minimalnego kąta odchylenia</a></li>
+                        <li><a href="#">Przewodnictwo elektryczne w przestrzeni plazmy</a></li>
+                        <li><a href="#">Reaktancja indukcyjna</a></li>
+                        <li><a href="#">Reaktancja pojemnościowa</a></li>
+                        <li><a href="#">Rezonans równoległy w obwodzie LC</a></li>
+                        <li><a href="#">Siła elektromagnetyczna liczona przy pomocy prawa Lorentza</a></li>
+                        <li><a href="#">Siła pola magnetycznego</a></li>
+                        <li><a href="#">Straty przesyłowe pomiędzy dwoma antenami liczone przy pomocy równania strat przesyłowych Friisa</a></li>
+                        <li><a href="#">Szerokość wiązki anteny</a></li>
+                        <li><a href="#">Szyk antenowy</a></li>
+                        <li><a href="#">Średnia gęstość strumienia oscylacyjnego dipola elektrycznego</a></li>
+                        <li><a href="#">Wartość Finesse liczona przy pomocy współczynnika Finesse interferometru Fabry'ego-Perota</a></li>
+                        <li><a href="#">Wartość Finesse liczona przy pomocy współczynnika jakości promieniowania interferometru Fabry'ego-Perota</a></li>
+                        <li><a href="#">Wartość indukcji pola magnetycznego liczona przy pomocy prawa Biota-Savarta</a></li>
+                        <li><a href="#">Wektor magnetyczny ruchomego punktu liczonego przy pomocy potencjału Lienarda-Wiecherta</a></li>
+                        <li><a href="#">Wielomodowa dyspersja włókna optycznego</a></li>
+                        <li><a href="#">Współczynnik Finesse interferometra Fabry'ego-Perota</a></li>
+                        <li><a href="#">Wspołczynnik jakości induktora</a></li>
+                        <li><a href="#">Współczynnik załamania światła w plaźmie</a></li>
+                        <li><a href="#">Zmagazynowana energia poprzez ładunek elektryczny</a></li>
+                        <li><a href="#">Zmagazynowana energia poprzez różnicę potencjałów</a></li>
+                        <li><a href="#">Zysk anteny dBi</a></li>
+                     </ul>
+                  </li>
+                  <li class="sidebar__sublist__category physics__classic">Fizyka Klasyczna</li>
+                  <li class="sidebar__sublist__category physics__geophysics">Geofizyka</li>
+                  <li class="sidebar__sublist__category physics__fluid-mechanics">Mechanika płynów</li>
+                  <li class="sidebar__sublist__category physics__thermodynamics">Termodynamika</li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="content">
+            <div class="content__default section"></div>
+            <div id="content__load" class="content__container--upper"></div>
+            <div class="content__container--bottom">
+               <div class="section converter">
+                  <table class="section__content">
+                     <tr class="section__content--header">
+                        <td colspan="5">
+                           <h3>Konwerter jednostek fizycznych układu SI</h3></td>
+                     </tr>
+                     <tr class="section__content--body SI__options--row">
+                        <td data-id="1" class="SI__section pressure">
+                           <div class="SI__section--icon"><i class="fa fa-tachometer" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Ciśnienie</div>
+                        </td>
+                        <td data-id="2" class="SI__section time">
+                           <div class="SI__section--icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Czas</div>
+                        </td>
+                        <td data-id="3" class="SI__section length">
+                           <div class="SI__section--icon"><i class="fa fa-sliders" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Długość</div>
+                        </td>
+                        <td data-id="4" class="SI__section energy">
+                           <div class="SI__section--icon"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Energia</div>
+                        </td>
+                        <td data-id="5" class="SI__section mass">
+                           <div class="SI__section--icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Masa</div>
+                        </td>
+                     </tr>
+                     <tr class="section__content--body SI__options--row">
+                        <td data-id="6" class="SI__section volume">
+                           <div class="SI__section--icon"><i class="fa fa-cube" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Objętość</div>
+                        </td>
+                        <td data-id="7" class="SI__section area">
+                           <div class="SI__section--icon"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Powierzchnia</div>
+                        </td>
+                        <td data-id="8" class="SI__section speed">
+                           <div class="SI__section--icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Prędkość</div>
+                        </td>
+                        <td data-id="9" class="SI__section force">
+                           <div class="SI__section--icon"><i class="fa fa-gavel" aria-hidden="true"></i></div>
+                           <div class="SI__section--description">Siła</div>
+                        </td>
+                        <td data-id="10" class="SI__section temperature">
+                           <div class="SI__section--icon"><sup>o</sup>C</div>
+                           <div class="SI__section--description">Temperatura</div>
+                        </td>
+                     </tr>
+                     <tr class="SI__container--outer">
+                        <td>
+                           <table class="SI">
+                              <tr align="center">
+                                 <th class="hidden SI__arrow SI__arrow--prev" rowspan="3">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                 </th>
+                                 <th class="SI__container--load" colspan="4" rowspan="3">
+                                    <table id="SI__id_1" class="SI__container--inner SI__container--slide" align="center">
+                                       <tr>
+                                          <td>
+                                             <h4 class="SI__header">Ciśnienie</h4>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromPressureInput" type=number step=any placeholder="0" />
+                                                <select name="fromPressurePrefix" title="select prefix for pressure">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromPressureType">
+                                                   <option value="Pa">Pa (paskal)</option>
+                                                   <option value="bar">bar (bar)</option>
+                                                   <option value="at">at (atmosfera techniczna)</option>
+                                                   <option value="atm">atm (atmosfera standardowa)</option>
+                                                   <option value="Tr">Tr (torr)</option>
+                                                   <option value="psi">psi (funt na cal kwadratowy)</option>
+                                                </select>
+                                              </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_1--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toPressurePrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toPressureType">
+                                                   <option value="Pa">Pa (paskal)</option>
+                                                   <option value="bar">bar (bar)</option>
+                                                   <option value="at">at (atmosfera techniczna)</option>
+                                                   <option value="atm">atm (atmosfera standardowa)</option>
+                                                   <option value="Tr">Tr (torr)</option>
+                                                   <option value="psi">psi (funt na cal kwadratowy)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_2" class="SI__container--inner SI__container--slide" align="center" name="Time">
+                                       <tr>
+                                          <td>
+                                             <h4 class="SI__header">Czas</h4>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromTimeInput" type=number step=any placeholder="0" />
+                                                <select name="fromTimePrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromTimeType">
+                                                   <option value="s">s (sekunda)</option>
+                                                   <option value="min">min (minuta)</option>
+                                                   <option value="h">h (godzina)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                   <input class="SI__id_2--result" type=text step=any placeholder="0" readonly />
+                                                   <select name="toTimePrefix">
+                                                      <option value="Y">Y (jotta)</option>
+                                                      <option value="Z">Z (zetta)</option>
+                                                      <option value="E">E (eksa)</option>
+                                                      <option value="P">P (penta)</option>
+                                                      <option value="T">T (tera)</option>
+                                                      <option value="G">G (giga)</option>
+                                                      <option value="M">M (mega)</option>
+                                                      <option value="k">k (kilo)</option>
+                                                      <option value="h">h (hekto)</option>
+                                                      <option value="da">da (deka)</option>
+                                                      <option value="none" selected="selected">-</option>
+                                                      <option value="d">d (decy)</option>
+                                                      <option value="c">c (centy)</option>
+                                                      <option value="m">m (mili)</option>
+                                                      <option value="u">μ (mikro)</option>
+                                                      <option value="n">n (nano)</option>
+                                                      <option value="p">p (piko)</option>
+                                                      <option value="f">f (femto)</option>
+                                                      <option value="a">a (atto)</option>
+                                                      <option value="z">z (zepto)</option>
+                                                      <option value="y">y (jokto)</option>
+                                                   </select>
+                                                   <select name="toTimeType">
+                                                      <option value="s">s (sekunda)</option>
+                                                      <option value="min">min (minuta)</option>
+                                                      <option value="h">h (godzina)</option>
+                                                   </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_3" class="SI__container--inner SI__container--slide" align="center"   name="Length">
+                                       <tr>
+                                          <td>
+                                              <h4 class="SI__header">Długość</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromLengthInput" type=number step=any placeholder="0" />
+                                                <select name="fromLengthPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromLengthType">
+                                                   <option value="m">m (metr)</option>
+                                                   <option value="au">au (jednostka astronomiczna)</option>
+                                                   <option value="A">Å (angstrom)</option>
+                                                   <option value="in">in (cal)</option>
+                                                   <option value="ft">ft (stopy)</option>
+                                                   <option value="yd">yd (jard)</option>
+                                                   <option value="mi">m (mila)</option>
+                                                   <option value="nm">mn (mila morska)</option>
+                                                   <option value="ly">ly (rok świetlny)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_3--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toLengthPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toLengthType">
+                                                   <option value="m">m (metr)</option>
+                                                   <option value="au">au (jednostka astronomiczna)</option>
+                                                   <option value="A">Å (angstrom)</option>
+                                                   <option value="in">in (cal)</option>
+                                                   <option value="ft">ft (stopy)</option>
+                                                   <option value="yd">yd (jard)</option>
+                                                   <option value="mi">m (mila)</option>
+                                                   <option value="nm">mn (mila morska)</option>
+                                                   <option value="ly">ly (rok świetlny)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                      </tr>
+                                     </table>
+                                    <table id="SI__id_4" class="SI__container--inner SI__container--slide" align="center" name="Energy">
+                                       <tr>
+                                          <td>
+                                              <h4 class="SI__header">Energia</h4>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromEnergyInput" type=number step=any placeholder="0" />
+                                                <select name="fromEnergyPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromEnergyType">
+                                                   <option value="J">J (dżul)</option>
+                                                   <option value="cal">cal (kaloria)</option>
+                                                   <option value="eV">eV (elektronowolt)</option>
+                                                   <option value="erg">erg (ergon)</option>
+                                                   <option value="Wh">Wh (wato-godzina)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_4--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toEnergyPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toEnergyType">
+                                                   <option value="J">J (dżul)</option>
+                                                   <option value="cal">cal (kaloria)</option>
+                                                   <option value="eV">eV (elektronowolt)</option>
+                                                   <option value="erg">erg (ergon)</option>
+                                                   <option value="Wh">Wh (wato-godzina)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_5" class="SI__container--inner SI__container--slide" align="center" name="Mass">
+                                       <tr>
+                                          <td>
+                                              <h4 class="SI__header">Masa</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromMassInput" type=number step=any placeholder="0" />
+                                                <select name="fromMassPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromMassType">
+                                                   <option value="g">g (gram)</option>
+                                                   <option value="t">t (tona)</option>
+                                                   <option value="lb">lb (funt)</option>
+                                                   <option value="oz">oz (uncja)</option>
+                                                   <option value="ct">ct (karat)</option>
+                                                   <option value="u">u (atomowa jednostka masy)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_5--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toMassPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                               </select>
+                                               <select name="toMassType">
+                                                   <option value="g">g (gram)</option>
+                                                   <option value="t">t (tona)</option>
+                                                   <option value="lb">lb (funt)</option>
+                                                   <option value="oz">oz (uncja)</option>
+                                                   <option value="ct">ct (karat)</option>
+                                                   <option value="u">u (atomowa jednostka masy)</option>
+                                               </select>
+                                             </div>
+                                          </td>
+                                      </tr>
+                                    </table>
+                                    <table id="SI__id_6" class="SI__container--inner SI__container--slide" align="center" name="Volume">
+                                       <tr>
+                                          <td>
+                                             <h4 class="SI__header">Objętość</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromVolumeInput" type=number step=any placeholder="0" />
+                                                <select name="fromVolumePrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromVolumeType">
+                                                   <option value="m3">m&#179; (metr sześcienny)</option>
+                                                   <option value="L">l (litr)</option>
+                                                   <option value="in3">in&#179; (cal sześcienny)</option>
+                                                   <option value="ft3">ft&#179; (stopa sześcienna)</option>
+                                                   <option value="yd3">yd&#179; (jard sześcienny)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_6--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toVolumePrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toVolumeType">
+                                                   <option value="m3">m&#179; (metr sześcienny)</option>
+                                                   <option value="L">l (litr)</option>
+                                                   <option value="in3">in&#179; (cal sześcienny)</option>
+                                                   <option value="ft3">ft&#179; (stopa sześcienna)</option>
+                                                   <option value="yd3">yd&#179; (jard sześcienny)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_7" class="SI__container--inner SI__container--slide" align="center" name="Area">
+                                       <tr>
+                                          <td>
+                                             <h4 class="SI__header">Powierzchnia</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromAreaInput" type=number step=any placeholder="0" />
+                                                <select name="fromAreaPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromAreaType">
+                                                   <option value="m2">m&#178; (metr kwadratowy)</option>
+                                                   <option value="a">a (ar)</option>
+                                                   <option value="ha">ha (hektar)</option>
+                                                   <option value="in2">in&#178; (cal kwadratowy)</option>
+                                                   <option value="ft2">ft&#178; (stopa kwadratowa)</option>
+                                                   <option value="yd2">yd&#178; (jard kwadratowy)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_7--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toAreaPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toAreaType">
+                                                   <option value="m2">m&#178; (metr kwadratowy)</option>
+                                                   <option value="a">a (ar)</option>
+                                                   <option value="ha">ha (hektar)</option>
+                                                   <option value="in2">in&#178; (cal kwadratowy)</option>
+                                                   <option value="ft2">ft&#178; (stopa kwadratowa)</option>
+                                                   <option value="yd2">yd&#178; (jard kwadratowy)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_8" class="SI__container--inner SI__container--slide" align="center" name="Speed">
+                                       <tr>
+                                          <td>
+                                             <h4 class="SI__header">Prędkość</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromSpeedInput" type=number step=any placeholder="0" />
+                                                <select name="fromSpeedPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="fromSpeedType">
+                                                   <option value="ms">m/s (metr na sekundę)</option>
+                                                   <option value="mmin">m/min (metr na minutę)</option>
+                                                   <option value="mh">m/h (metr na godzinę)</option>
+                                                   <option value="mph">mph (mila na godzinę)</option>
+                                                   <option value="kn">kn (węzeł)</option>
+                                                   <option value="M">M (mach)</option>
+                                                   <option value="c">c (prędkość światła)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_8--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toSpeedPrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toSpeedType">
+                                                   <option value="ms">m/s (metr na sekundę)</option>
+                                                   <option value="mmin">m/min (metr na minutę)</option>
+                                                   <option value="mh">m/h (metr na godzinę)</option>
+                                                   <option value="mph">mph (mila na godzinę)</option>
+                                                   <option value="kn">kn (węzeł)</option>
+                                                   <option value="M">M (mach)</option>
+                                                   <option value="c">c (prędkość światła)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_9" class="SI__container--inner SI__container--slide" align="center" name="Force">
+                                       <tr>
+                                          <td>
+                                              <h4 class="SI__header">Siła</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                              <div class="SI__label--input">Przelicz z</div>
+                                              <div align="center">
+                                                  <input class="fromForceInput" type=number step=any placeholder="0" />
+                                                  <select name="fromForcePrefix">
+                                                      <option value="Y">Y (jotta)</option>
+                                                      <option value="Z">Z (zetta)</option>
+                                                      <option value="E">E (eksa)</option>
+                                                      <option value="P">P (penta)</option>
+                                                      <option value="T">T (tera)</option>
+                                                      <option value="G">G (giga)</option>
+                                                      <option value="M">M (mega)</option>
+                                                      <option value="k">k (kilo)</option>
+                                                      <option value="h">h (hekto)</option>
+                                                      <option value="da">da (deka)</option>
+                                                      <option value="none" selected="selected">-</option>
+                                                      <option value="d">d (decy)</option>
+                                                      <option value="c">c (centy)</option>
+                                                      <option value="m">m (mili)</option>
+                                                      <option value="u">μ (mikro)</option>
+                                                      <option value="n">n (nano)</option>
+                                                      <option value="p">p (piko)</option>
+                                                      <option value="f">f (femto)</option>
+                                                      <option value="a">a (atto)</option>
+                                                      <option value="z">z (zepto)</option>
+                                                      <option value="y">y (jokto)</option>
+                                                  </select>
+                                                  <select name="fromForceType">
+                                                      <option value="N">N (niuton)</option>
+                                                      <option value="dyn">dyn (dyna)</option>
+                                                      <option value="kgf">kgf (kilogram-siła)</option>
+                                                  </select>
+                                              </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_9--result" type=text step=any placeholder="0" readonly />
+                                                <select name="toForcePrefix">
+                                                   <option value="Y">Y (jotta)</option>
+                                                   <option value="Z">Z (zetta)</option>
+                                                   <option value="E">E (eksa)</option>
+                                                   <option value="P">P (penta)</option>
+                                                   <option value="T">T (tera)</option>
+                                                   <option value="G">G (giga)</option>
+                                                   <option value="M">M (mega)</option>
+                                                   <option value="k">k (kilo)</option>
+                                                   <option value="h">h (hekto)</option>
+                                                   <option value="da">da (deka)</option>
+                                                   <option value="none" selected="selected">-</option>
+                                                   <option value="d">d (decy)</option>
+                                                   <option value="c">c (centy)</option>
+                                                   <option value="m">m (mili)</option>
+                                                   <option value="u">μ (mikro)</option>
+                                                   <option value="n">n (nano)</option>
+                                                   <option value="p">p (piko)</option>
+                                                   <option value="f">f (femto)</option>
+                                                   <option value="a">a (atto)</option>
+                                                   <option value="z">z (zepto)</option>
+                                                   <option value="y">y (jokto)</option>
+                                                </select>
+                                                <select name="toForceType">
+                                                   <option value="N">N (niuton)</option>
+                                                   <option value="dyn">dyn (dyna)</option>
+                                                   <option value="kgf">kgf (kilogram-siła)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table id="SI__id_10" class="SI__container--inner SI__container--slide" align="center" name="Temperature">
+                                       <tr>
+                                             <td>
+                                                 <h4 class="SI__header">Temperatura</h4></td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz z</div>
+                                             <div align="center">
+                                                <input class="fromTemperatureInput" type=number step=any placeholder="0" />
+                                                <select name="fromTemperatureType">
+                                                   <option value="K">K (kelwin)</option>
+                                                   <option value="C">&#176C (stopień celsjusza)</option>
+                                                   <option value="F">&#176F (stopień fahrenheit'a)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>
+                                             <div class="SI__label--input">Przelicz na</div>
+                                             <div align="center">
+                                                <input class="SI__id_10--result" type='text' step=any placeholder="0" readonly />
+                                                <select name="toTemperatureType">
+                                                   <option value="K">K (kelwin)</option>
+                                                   <option value="C">&#176C (stopień celsjusza)</option>
+                                                   <option value="F">&#176F (stopień fahrenheit'a)</option>
+                                                </select>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </th>
+                                 <th class="hidden SI__arrow SI__arrow--next" rowspan="3">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                 </th>
+                              </tr>
+                              <tr></tr>
+                              <tr></tr>
+                              <tr align="center">
+                                 <td class="hidden bottom-menu" colspan="6">
+                                    <ul>
+                                       <li data-id="1" class="dot SI__icon_1"><i class="fa fa-tachometer" aria-hidden="true"></i></li>
+                                       <li data-id="2" class="dot SI__icon_2"><i class="fa fa-clock-o" aria-hidden="true"></i></li>
+                                       <li data-id="3" class="dot SI__icon_3"><i class="fa fa-sliders" aria-hidden="true"></i></li>
+                                       <li data-id="4" class="dot SI__icon_4"><i class="fa fa-bolt" aria-hidden="true"></i></li>
+                                       <li data-id="5" class="dot SI__icon_5"><i class="fa fa-globe" aria-hidden="true"></i></li>
+                                       <li data-id="6" class="dot SI__icon_6"><i class="fa fa-cube" aria-hidden="true"></i></li>
+                                       <li data-id="7" class="dot SI__icon_7"><i class="fa fa-square-o" aria-hidden="true"></i></li>
+                                       <li data-id="8" class="dot SI__icon_8"><i class="fa fa-location-arrow" aria-hidden="true"></i></li>
+                                       <li data-id="9" class="dot SI__icon_9"><i class="fa fa-gavel" aria-hidden="true"></i></li>
+                                       <li data-id="10" class="dot SI__icon_10"><i>&#176;C</i></li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               <!-- <div class="section"></div> -->
+            </div>
+
+         </div>
+
+      </div>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+      <script type="text/javascript" src="js/models/app/app.js"></script>
+      <script type="text/javascript" src="js/models/app/sidebar.functionality.js"></script>
+
+      <script type="text/javascript" src="js/models/app/quantities.js"></script>
+
+      <script type="text/javascript" src="js/controllers/app/components.js"></script>
+      <script type="text/javascript" src="js/controllers/app/math.js"></script>
+
+      <script type="text/javascript" src="js/controllers/physics/advanced.js"></script>
+      <script type="text/javascript" src="js/controllers/physics/dynamics.js"></script>
+      <script type="text/javascript" src="js/controllers/physics/electromagnetism.js"></script>
+
+      <script type="text/javascript" src="js/view/generateNode.js"></script>
+      <script type="text/javascript" src="js/view/loadNode.js"></script>
+      <script type="text/javascript" src="js/controllers/converter/converter_quantities.js"></script>
+      <script type="text/javascript" src="js/controllers/converter/converter.js"></script>
+
+      <script type="text/javascript" src="js/models/app/clipboard.functionality.js"></script>
+   </body>
+</html>

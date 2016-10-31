@@ -1,0 +1,41 @@
+@mixin background-opacity($color, $opacity) {
+    background: rgba($color, $opacity);
+}
+
+@mixin transition($element, $duration, $type){
+   -webkit-transition: $element $duration $type;
+   -moz-transition: $element $duration $type;
+   -o-transition: $element $duration $type;
+   transition: $element $duration $type;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color, $opacity, $inset: false) {
+   @include background-opacity($color, $opacity);
+   @if $inset {
+      -webkit-box-shadow:inset $horizontal $vertical $blur $spread $color;
+      box-shadow:inset $horizontal $vertical $blur $spread $color;
+   } @else {
+      -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+      box-shadow: $horizontal $vertical $blur $spread $color;
+  }
+}
+
+@mixin vertical-align($align: middle) {
+  &:before {
+    content: "";
+    height: 100%;
+    vertical-align: $align;
+  }
+  & > * {
+    vertical-align: $align;
+  }
+}
+
+@mixin no-select(){
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
