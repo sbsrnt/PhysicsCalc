@@ -3,16 +3,30 @@ $(document).ready(function() {
    var active = 'active';
    var displayNone = 'displayNone';
 
-   function compute(selector, id){
+   function compute(type, selector, id){
+
+       function setId(id) {
+           var previousNodeLength = $('.' + type + '__' + selector).prevAll().find('ul li').length;
+           var nodeLength = $('.' + type + '__' + selector + ' ul li').length;
+           var sum = previousNodeLength + nodeLength;
+           for (var i = previousNodeLength; i <= sum; i++) {
+               if (id == i) {
+                   id = Math.abs(previousNodeLength - id);
+                   return id;
+               }
+           }
+           console.log(previousNodeLength, nodeLength);
+           return previousNodeLength;
+       }
       switch (selector) {
          case 'Astrodynamika':
             physics_advanced_functions(id);
             break;
          case 'Dynamika':
-            physics_dynamics_functions(id);
+            physics_dynamics_functions(id, setId(type, id));
             break;
          case 'Elektromagnetyzm':
-            physics_electromagnetism_functions(id);
+            physics_electromagnetism_functions(id, setId(type, id));
             break;
       }
    }
@@ -31,7 +45,7 @@ $(document).ready(function() {
             $('.content__default').addClass(displayNone);
 
             generateNode(type, selector, id);
-            compute(selector, id);
+            compute(type, selector, id);
             var bottomSection = $('.converter');
             bottomSection.css('display', 'block');
          });
@@ -40,8 +54,8 @@ $(document).ready(function() {
       function showSublist(type, selector){
         homeElement.on('click', function(){
             // $('.section__content--body td').addClass(displayNone);
-            var z = $(this).append(quantities[type][selector]);
-            console.log(z);
+            // var z = $(this).parent().append(quantities[type][selector]);
+            // console.log(z);
         });
 
       }

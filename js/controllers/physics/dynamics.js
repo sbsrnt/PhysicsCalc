@@ -127,10 +127,10 @@ $(document).ready(function() {
             var a_select = getElement.select0(id);
             var roundVal = getElement.roundInput(id);
 
-            var formula = 2 * ojv * Math.cos(o) / p * g * (a * a_select);
+            var formula = 2 * ojv * Math.cos(toRadians(o)) / p * g * (a * a_select);
             result(roundVal, formula);
         });
-    } //5 inputow //todo cos wynik nie tak
+    } //5 inputow //todo: select do poprawy
     function compute9(id) {
         /*
          * PRĘDKOŚĆ FALI PODŁUŻNEJ W CIENKIM OKRĄGŁYM PRĘCIE
@@ -340,23 +340,11 @@ $(document).ready(function() {
         });
     } //todo dunno czy wynik jest dorby, dodać ^2 w środkowym M1 w converter_quantities.js
 
-    function setId(id) {
-        var previousNodeLength = $('.physics__dynamics').prevAll().find('ul li').length;
-        var nodeLength = $('.physics__dynamics ul li').length;
-        var sum = previousNodeLength + nodeLength;
-        for (var i = previousNodeLength; i <= sum; i++) {
-            if (id == i) {
-                id = Math.abs(previousNodeLength - id);
-                return id;
-            }
-        }
-        console.log(previousNodeLength, nodeLength);
-        return previousNodeLength;
-    }
-    window.physics_dynamics_functions = function(id){
+    window.physics_dynamics_functions = function(id, setId){
         var physics_dynamics_functions_array = [compute0, compute1, compute2, compute3, compute4, compute5, compute6, compute7,
         compute8, compute9, compute10, compute11, compute12, compute13, compute14, compute15, compute16, compute17, compute18,
          compute19, compute20, compute21, compute22];
-        return physics_dynamics_functions_array[id-setId()](id);
+
+        return physics_dynamics_functions_array[id-setId](id);
     }
 });

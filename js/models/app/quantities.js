@@ -4830,8 +4830,8 @@ var quantities = {
                         }
                     ],
                     "footer": {
-                        "label": "Częstotliwość kątowa Cyklotronu",
-                        "unit": "rad/s",
+                        "label": "Częstotliwość Plazmy",
+                        "unit": "Hz",
                         "value": "",
                         "selectLength": false,
                         "selectWeight": false
@@ -5038,7 +5038,7 @@ var quantities = {
                             {
                                 "blueprint": "<i class=\"variable\">I<sub>L</sub></i> = <i" +
                                 " class=\"variable\">e</i><sup>2</sup> / (4π * <i" +
-                                " class=\"variable\">ε<sub>o</sub></i> * <i class=\"variable\">k<sub>B</sub> * <i" +
+                                " class=\"variable\">ε<sub>o</sub></i> * <i class=\"variable\">k<sub>B</sub></i> * <i" +
                                 " class=\"variable\">T<sub>e</sub></i>)"
                             },
                             {
@@ -5340,7 +5340,7 @@ var quantities = {
                         },
                         {
                             "label": "Częstotliwość",
-                            "unit": "&nbsp;",
+                            "unit": "Hz",
                             "value": "",
                             "class": "not-const",
                             "selectLength": false,
@@ -6192,6 +6192,12 @@ var quantities = {
                             {
                                 "desc": "Prędkość cząstki",
                                 "abbr": "υ",
+                                "sub": "",
+                                "sup": ""
+                            },
+                            {
+                                "desc": "Prędkość światła",
+                                "abbr": "c",
                                 "sub": "",
                                 "sup": ""
                             }
@@ -7433,7 +7439,7 @@ var quantities = {
                     ],
                     "footer": {
                         "label": "Pojemność elektryczna",
-                        "unit": "F",
+                        "unit": "C/V",
                         "value": "",
                         "selectLength": false,
                         "selectWeight": false
@@ -9473,7 +9479,7 @@ var quantities = {
                             },
                             {
                                 "desc": "Pojemność",
-                                "abbr": "c",
+                                "abbr": "L",
                                 "sub": "",
                                 "sup": ""
                             }

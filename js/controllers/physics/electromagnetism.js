@@ -173,7 +173,7 @@ $(document).ready(function() {
             var formula = Math.sqrt(ne * Math.pow(e, 2) / (eo * me));
             result(roundVal, formula);
         });
-    } //todo wynik, "czestotliwosc katowa cyklotronu -> plazmy i dodac Hz zamiast rad/s"
+    }
     function compute11(id) {
         /*
          * DŁUGOŚĆ ELEKTRONU DEBYE'A W PLAŹMIE
@@ -204,7 +204,7 @@ $(document).ready(function() {
             var formula = Math.pow(e, 2) / (4 * Math.PI * eo * kB * Te);
             result(roundVal, formula);
         });
-    } //todo domknąć <span>/<i> po kB
+    }
     function compute13(id) {
         /*
          * GĘSTOŚĆ ENERGII POLA ELEKTROMAGNETYCZNEGO
@@ -264,7 +264,7 @@ $(document).ready(function() {
             var formula = Math.sqrt((2 * p) / (w * ur * uo));
             result(roundVal, formula);
         });
-    } //todo dodać Hz do częstotliwości
+    }
     function compute17(id) {
         /*
          * IMPEDANCJA AKUSTYCZNA
@@ -366,7 +366,7 @@ $(document).ready(function() {
             var formula = uo / 2 * Math.PI * (Math.log((b * b_select) / (a * a_select)));
             result(roundVal, formula);
         });
-    } //todo wynik?
+    }
     function compute24(id) {
         /*
          * INDUKCYJNOŚĆ SOLENOIDU (CEWKI) SKIEROWANEGO NA PÓŁNOC
@@ -423,7 +423,7 @@ $(document).ready(function() {
             var formula = 1 / Math.sin(c / n * v);
             result(roundVal, formula);
         });
-    } //todo quantitie.js dodac c w formule
+    }
     function compute28(id) {
         /*
          * KONDENSATOR CYLINDRYCZNY - POJEMNOŚĆ
@@ -664,7 +664,7 @@ $(document).ready(function() {
             var formula = Math.PI * eo * (l * l_select) / (1 / Math.cosh((d * d_select) / 2 * (r * r_select)));
             result(roundVal, formula);
         });
-    } //todo F na C/V w rezultacie
+    }
     function compute44(id) {
         /*
          * POJEMNOŚĆ ELEKTRYCZNA POWIERZCHNI PRAWIE SFERYCZNEJ
@@ -1045,7 +1045,7 @@ $(document).ready(function() {
             var formula = 1 / (2 * Math.PI * f * L);
             result(roundVal, formula);
         });
-    } //todo poprawić w formule XC na XL i c na L
+    }
     function compute70(id) {
         /*
          * REZONANS RÓWNOLEGŁY W OBWODZIE LC
@@ -1058,7 +1058,7 @@ $(document).ready(function() {
             var formula = 1 / (2 * Math.PI * Math.sqrt(L * C));
             result(roundVal, formula);
         });
-    } //todo poprawić w formule XC na f
+    }
     function compute71(id) {
         /*
          * SIŁA ELEKTROMAGNETYCZNA LICZONA PRZY POMOCY PRAWA LORENTZA
@@ -1315,20 +1315,8 @@ $(document).ready(function() {
         });
     }
 
-    function setId(id) {
-        var previousNodeLength = $('.physics__electromagnetism').prevAll().find('ul li').length;
-        var nodeLength = $('.physics__electromagnetism ul li').length;
-        var sum = previousNodeLength + nodeLength;
-        for (var i = previousNodeLength; i <= sum; i++) {
-            if (id == i) {
-                id = Math.abs(previousNodeLength - id);
-                return id;
-            }
-        }
-        console.log(previousNodeLength, nodeLength);
-        return previousNodeLength;
-    }
-    window.physics_electromagnetism_functions = function(id){
+    window.physics_electromagnetism_functions = function(id, setId){
+        console.log(setId);
         var physics_physics_electromagnetism_functions_array = [compute0, compute1, compute2, compute3, compute4, compute5, compute6, compute7,
         compute8, compute9, compute10, compute11, compute12, compute13, compute14, compute15, compute16, compute17, compute18, compute19,
         compute20, compute21, compute22, compute23, compute24, compute25, compute26, compute27, compute28, compute29, compute30, compute31,
@@ -1337,6 +1325,6 @@ $(document).ready(function() {
         compute56, compute57, compute58, compute59, compute60, compute61, compute62, compute63, compute64, compute65, compute66, compute67,
         compute68, compute69, compute70, compute71, compute72, compute73, compute74, compute75, compute76, compute77, compute78, compute79,
         compute80, compute81, compute82, compute83, compute84, compute85, compute86, compute87];
-        return physics_physics_electromagnetism_functions_array[id-setId()](id);
+        return physics_physics_electromagnetism_functions_array[id-setId](id);
     }
 });
