@@ -2418,7 +2418,7 @@ var quantities = {
                             "selectWeight": false
                         },
                         {
-                            "label": "Moment obszaru (usunac: m=1)",
+                            "label": "Moment obszaru",
                             "unit": "m<sup>2</sup>",
                             "value": "",
                             "class": "not-const",
@@ -2426,7 +2426,7 @@ var quantities = {
                             "selectWeight": false
                         },
                         {
-                            "label": "Promień krzywizny (usunac: m=0.01)",
+                            "label": "Promień krzywizny",
                             "unit": "m",
                             "value": "",
                             "class": "not-const",

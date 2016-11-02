@@ -6,7 +6,8 @@ function generateDefaultView(type){
         '<table class="section__content">'+
             '<tr class="section__content--header">'+
                 '<td colspan='+5+'>'+type+'</td>'+
-            '</tr>';
+            '</tr>'+
+            '<tr style="height: 100%" class="displayNone"><td colspan="5" class="section__content--default"><ul class="quantitiesList"></ul></td></tr>';
     if (ql > 5) {
         output +=
             '<tr class="section__content--body">';
@@ -29,6 +30,7 @@ function generateDefaultView(type){
         }
         output += '</tr>';
     }
+
     output += '</table>';
     return output;
 }

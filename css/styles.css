@@ -165,6 +165,15 @@ body {
           display: inline;
           text-transform: uppercase;
           vertical-align: middle; }
+      .container .content .section .section__content .section__content--default .quantitiesList {
+        cursor: default;
+        height: 346px;
+        overflow-y: auto; }
+        .container .content .section .section__content .section__content--default .quantitiesList .quantitiesItem {
+          margin-left: 25px;
+          list-style: disc;
+          padding: 10px 0;
+          cursor: pointer; }
       .container .content .section .section__content .section__content--body td {
         font-size: 14px; }
         .container .content .section .section__content .section__content--body td i {
@@ -210,7 +219,8 @@ body {
             border: 0;
             padding: 5px;
             cursor: pointer;
-            outline: none; }
+            outline: none;
+            margin-left: 5px; }
             .container .content .section .section__content .section__content--footer td .round-block button .button-description {
               background: #E6E2AF;
               color: #046380;
